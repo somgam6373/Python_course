@@ -76,7 +76,7 @@ while len > 0:
     len -= 1
     y += (int(x[-len-1]) * 2**(len))
 
-print(y)
+print(y) 
 
 # 2진수를 10진수로 변환 - for
 x = str(input("2진수 입력:"))
