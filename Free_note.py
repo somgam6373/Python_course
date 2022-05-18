@@ -1,19 +1,7 @@
-import math as m
-a = int(input("이차함의 계수 입력:"))
-b = int(input("일차항의 계수 입력:"))
-c = int(input("상수항 입력:"))
+x = int(input("첫번째 숫자를 입력하시오:"))
+y = int(input("두번째 숫자를 입력하시오:"))
 
-x = (-b+-m.sqrt(b**2-4*a*c))/2
-print(x)
-
-
-D = b**2 - 4*a*c
-if D < 0:
-    print("해가 2개")
-elif D == 0:
-    print("해가 1개")
-else:
-    print("해가 없음")
-
-n = int(input("각도 입력:"))
-print(m.sin(m.radians(n)))
+print(x,'+',y,'=',x+y)
+print(x,'-',y,'=',x-y)
+print(x,'*',y,'=',x*y)
+print(x,'/',y,'=',x/y)
