@@ -14,15 +14,24 @@ while True:
 '''
 mydict = {}
 
-fp = open("c:\\python_test\\animal_dictionary","r", encoding = 'cp949')
+fp = open("C:\\pythontest\\animal_dictionary.txt","r", encoding = 'cp949')
 for line in fp.readlines():
     line = line.strip()
-    x = line.split(".")
+    x = line.split(",")
     mydict[x[0]] = x[1]
 
 fp.close()
 
-print(mydict)
+while True:
+    word = input("단어를 입력하시오(종료:0):")
+    
+    if word == '0':
+        print("종료되었습니다.")
+        break
+    elif word in mydict.keys():
+        print(word," : ",mydict[word])
+    else:
+        print("사전에 없는 단어입니다.")
 
 
 
