@@ -14,3 +14,9 @@ while True:
         print("사전에 없는 단어입니다.")
     
 '''
+fp = open("c:\\python_test\\all_gugu.txt", "r")
+for line in fp.readlines():
+    print(line, end = '')
+fp.close()
+
+
