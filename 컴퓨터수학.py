@@ -1,10 +1,7 @@
-#factor는 인수분해를 의미함
-
 import sympy as sp
 x = sp.Symbol('x')
-a = sp.Symbol('a')
-alpha = sp.Symbol('alpha')
-beta = sp.Symbol('beta')
+fx = x+1/x-1/x**2
+gx = (sp.sqrt(x) + 4)/x
+print(sp.integrate(fx,x))
+print(sp.integrate(gx,x))
 
-fx = a*(x-alpha) * (x-beta)
-print(sp.factor(sp.integrate(fx, (x,alpha,beta))))
