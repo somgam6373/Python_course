@@ -15,6 +15,11 @@ print("ac+bc =",second)
 
 import sympy as sp
 k = sp.Symbol("k")
-third = k*np.dot(a,b)
-print(third)
+third = np.dot(k*a,b)
+print("(ka)b",third)
 
+forth = k*(np.dot(a,b))
+print("k(ab)",forth)
+
+fifth = np.dot(a,k*b)
+print("a(kb)",fifth)
