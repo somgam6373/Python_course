@@ -14,7 +14,7 @@ second = np.dot(a,c)+np.dot(b,c)
 print("ac+bc =",second)
 
 import sympy as sp
-k = sp.Symbol("k")
+k = 10
 third = np.dot(k*a,b)
 print("(ka)b",third)
 
