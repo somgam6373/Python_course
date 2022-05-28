@@ -1,25 +1,35 @@
-name: DoTheWork
-description: "checkout repo, build and run tests"
-runs:
-  using: composite
-  steps:
-  - name: Show env
-    shell: bash
-    run: |
-      echo NPY_RELAXED_STRIDES_DEBUG $NPY_RELAXED_STRIDES_DEBUG
-      echo CHECK_BLAS $CHECK_BLAS
-      echo DOWNLOAD_OPENBLAS $DOWNLOAD_OPENBLAS
-      echo USE_DEBUG $USE_DEBUG
-      echo NPY_USE_BLAS_ILP64 $NPY_USE_BLAS_ILP64
-      echo NUMPY_EXPERIMENTAL_ARRAY_FUNCTION $NUMPY_EXPERIMENTAL_ARRAY_FUNCTION
-      echo USE_ASV $USE_ASV
-      echo PATH $PATH
-      echo python `which python`
-      python -c "import sys; print(sys.version)"
-  - name: BeforeInstall
-    shell: bash
-    run: ./tools/travis-before-install.sh
+# animal = {"강아지":"dog","고양이":"cat","새":"bird","코끼리":"elephant"}
 
-  - name: Test
-    shell: bash
-    run: ./tools/travis-test.sh
+# while True:
+#   word = input("단어를 입력하세요(종료:0):")
+#   if word == "0":
+#     print("종료되었습니다.")
+#     break
+#   elif word not in animal.keys():
+#     print("사전에 없는 단어입니다.")
+#   elif word in animal.keys(): 
+#     print(word,":",animal[word])
+
+mydict = {}  
+
+fp = open("c:\\pythontest\\movie_data.txt","r",encoding='cp949')
+
+for line in fp.readlines():
+  line = line.strip()
+  x = line.split('|')
+  mydict[x[0]] = x[1], x[2], x[3], x[4], x[5], x[6], x[7] #value
+
+fp.close()
+
+while True:
+  word = input("영화 이름 입력(종료:0):")
+  if word == "0":
+    print("종료되었습니다.")
+    break
+
+  elif word in mydict.keys(): 
+    print(mydict[word])
+    print("-----------------------------")
+  elif word not in mydict.keys():
+    print("데이터베이스에 없는 영화입니다")
+    print("-----------------------------")

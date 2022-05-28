@@ -1,13 +1,11 @@
-import sympy as sp
-x = sp.Symbol('x')
-fx = (sp.exp(2*x)-1)/(sp.exp(x)+1)
-gx = sp.Abs(sp.sin(x))
-kx = x*sp.sqrt(x**2 + 2)
-px = sp.exp(x) * sp.sin(x)
+import numpy as np
+p = np.array([1,-1,1])
+q = np.array([1,3,6])
+r = np.array([2,-5,3])
 
-print("The answer is:", sp.integrate(fx,(x,0,2)))
-print("The answer is:", sp.integrate(gx,(x,-sp.pi,sp.pi)))
-print("The answer is:", sp.integrate(kx,(x,1,3)))
-print("The answer is:", sp.integrate(px,(x,0,sp.pi/2)))
+pq = q - p
+pr = r - p
 
-
+print(pq)
+print(pr)
+print(np.cross(pq,pr))
