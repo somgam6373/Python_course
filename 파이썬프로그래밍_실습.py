@@ -1,31 +1,25 @@
-#1
-'''
-favor = []
-while True:
-    fruit = input("과일명 입력:")
-    if fruit == str(0):
-        break
-    favor.append(fruit)
-print("당신이 좋아하는 과일들:",favor)
-'''
+list_1 = []
+list_2 = []
+list_3 = []
 
-#2
 
-'''
-name = []
-while True:
-    friend = input("친구 이름 입력:")
-    if friend == 0:
-        break
-    name.append(friend)
-    print("등록 완료")
-print("입력된 순서:", name)
-print("정렬된 순서:", )
-'''
+korea_1 = int(input("첫번째 학생 국어 점수:"))
+list_1.append(korea_1)
+english_1 = int(input("첫번째 학생의 영어 점수:"))
+list_1.append(english_1)
+math_1 = int(input("%첫번째 학생의 수학 점수:"))
+list_1.append(math_1)
 
-#3
-grade = []
-for i in range(5):
-    student = input(i,"번째 학생 성적:")
-print("성적 합계:")
-print("성적 평균:")
+korea_2 = int(input("두번째 학생 국어 점수:"))
+list_2.append(korea_2)
+english_2 = int(input("두번째 학생의 영어 점수:"))
+list_2.append(english_2)
+math_2 = int(input("%두번째 학생의 수학 점수:"))
+list_2.append(math_2)
+
+korea_3 = int(input("세번째 학생 국어 점수:"))
+list_3.append(korea_3)
+english_3 = int(input("세번째 학생의 영어 점수:"))
+list_3.append(english_3)
+math_3 = int(input("%세번째 학생의 수학 점수:"))
+list_3.append(math_3)
