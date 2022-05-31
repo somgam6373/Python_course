@@ -32,4 +32,8 @@ while True:
     print("-----------------------------")
   elif word not in mydict.keys():
     print("데이터베이스에 없는 영화입니다")
+
+
     print("-----------------------------")
+
+    print("heelo5")
