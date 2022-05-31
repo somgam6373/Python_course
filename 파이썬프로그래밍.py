@@ -17,23 +17,26 @@ fp = open("c:\\pythontest\\movie_data.txt","r",encoding='cp949')
 for line in fp.readlines():
   line = line.strip()
   x = line.split('|')
-  mydict[x[0]] = x[1], x[2], x[3], x[4], x[5], x[6], x[7] #value
+  mydict[x[2]] = x[3:]
 
 fp.close()
 
-while True:
-  word = input("영화 이름 입력(종료:0):")
-  if word == "0":
-    print("종료되었습니다.")
-    break
+while (True):
+    movie=input("영화이름 입력  (종료:0):")
+    if (movie=='0'):
+        break
+    else:
+        if movie in mydict.keys():
+            v=mydict[movie]
+            print("Company     : ",v[0])
+            print("Release data:",v[1])
+            print("Country     :",v[2])
+            print("Total screen::",v[3])
+            print("Profit      :",v[4])
+            print("Total num   :",v[5])
+            print("Grade       :",v[6])
 
-  elif word in mydict.keys(): 
-    print(mydict[word])
-    print("-----------------------------")
-  elif word not in mydict.keys():
-    print("데이터베이스에 없는 영화입니다")
-
-
-    print("-----------------------------")
-
-    print("heelo5")
+            print("----------------------------------------------------------")
+        else:
+            print("데이터베이스에 없는 영화입니다")
+            print("----------------------------------------------------------")
