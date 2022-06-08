@@ -9,53 +9,25 @@
 #리스트의 길이: len
 
 
+#스택: 들어간 순서대로 출력
+#큐: 가장 최근에 입력된 것부터 출력
+#isalpha: 문자열이 알파벳인지 아닌지 판별함
+#'while qu:' 의 이유 : qu의 리스트가 없어질 때까지 반복
 
-score = [50, 30, 90, 70, 60]
-idx, val, cnt = 0, 0, 0
+while True:
+    checkString = input("입력:")
+    if checkString == "end":
+        break
+    qu = []
+    st = []
+    for ch in (checkString):
+        if ch.isalpha():
+            qu.append(ch.lower())
+            st.append(ch.lower())   
 
-print("현재 입력된 점수는")
-print(score, "이고, 모두", len(score), '개 입니다.')
-
-print()
-print("append 연습")
-val = int(input('append 할 값 : '))
-score.append(val)
-print(score)
-
-print()
-print("insert 연습")
-idx = int(input("insert할 위치 : "))
-val = int(input("insert 할 값 : "))
-score.append(val)
-print(score)
-
-print()
-print("index 연습")
-val = int(input("찾고 싶은 값 : "))
-idx = score.index(val)
-print(score)
-print("%d는 %d번째 위치하고 있습니다." % (val, idx))
-
-print()
-print("remove 연습")
-val = int(input("삭제하고 싶은 값 : "))
-score.remove(val)
-print(score)
-
-print()
-print("del 연습")
-idx = int(input("삭제할 위치 : "))
-del(score[idx])
-print(score)
-
-print()
-print("count 연습")
-val = int(input("갯수를 알고 싶은 값 : "))
-cnt = score.count(val)
-print(score)
-print("%d는 %d번 나옵니다." %(val, cnt))
-
-print()
-print("reverse sort 연습")
-score.reverse()
-print(score)
+    while qu:
+        if qu.pop(0) != st.pop():
+            print("%s는 회문이 아닙니다."%checkString)
+            break
+    else:
+        print("%s는 회문입니다."%checkString)
