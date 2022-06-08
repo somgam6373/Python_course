@@ -13,7 +13,7 @@
 #큐: 가장 최근에 입력된 것부터 출력
 #isalpha: 문자열이 알파벳인지 아닌지 판별함
 #'while qu:' 의 이유 : qu의 리스트가 없어질 때까지 반복
-
+'''
 while True:
     checkString = input("입력:")
     if checkString == "end":
@@ -31,3 +31,7 @@ while True:
             break
     else:
         print("%s는 회문입니다."%checkString)
+'''
+a = "asd"
+for i in a:
+    print("b")
