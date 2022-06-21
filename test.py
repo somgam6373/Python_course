@@ -42,10 +42,10 @@ print(f(n))   '''
 a = int(input(":"))
 b = int(input(":"))
 def f(a,b):
-    if b == 0:
-        return 0
-    if a%2 == 0:
-        return a + f(a+2, b-2)
+    if b == 1:
+        return 1
     else:
-        return a+1 + f(a,b-2)
-print(f(a,b))  
+        return a + f(a+1,b-1) 
+print(f(a,b)+b-1)
+
+#https://seong6496.tistory.com/72
