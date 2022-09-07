@@ -38,7 +38,7 @@ def f(n):
 print(f(n))   '''
 
 #5
-
+'''
 a = int(input(":"))
 b = int(input(":"))
 def f(a,b):
@@ -49,3 +49,21 @@ def f(a,b):
 print(f(a,b)+b-1)
 
 #https://seong6496.tistory.com/72
+'''
+# 입력한 수 이하의 소수를 출력하시오
+
+def f(n):
+    list = []
+    for i in range(2, n+1):
+        is_prime = True
+        for j in range(2, i):
+            if i % j == 0:
+                is_prime = False
+                break
+        if is_prime:
+            list.append(i)
+    return list
+print(f(100))
+
+
+
