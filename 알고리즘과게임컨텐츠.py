@@ -1,62 +1,42 @@
-#합 구하기 for문
-'''n = int(input("n을 입력하세요:"))
-s = 0
-
-for i in range(1, n+1):
-    s = s + i
-print(s)
-'''
-#합 구하기 가우스 방정식
-'''
-n = int(input(":"))
-s = 0
-s = n * (n+1)//2
-print(s)
 '''
 
-'''#성능분석(1)
-import time
-n = int(input("n을 입력하시오:"))
+money, c500, c100, c50, c10 = 0, 0, 0, 0, 0
 
-start = time.time()
-s = 0
-for i in range(1, n+1):
-    s = s + 1
-end = time.time()
-print(s, end-start)
+money = int(input("교환할 돈은 얼마?:"))
+
+c500 = money // 500
+money %= 500
+
+c100 = money // 100
+money %= 100
+
+c50 = money // 50
+money %= 50
+
+c10 = money // 10
+money %= 10
+
+print("\n 500원짜리 ==> %d개" % c500)
+print(" 100원짜리 ==> %d개" % c100)
+print(" 50원짜리 ==> %d개" % c50)
+print(" 10원짜리 ==> %d개" % c10)
+print(" 바꾸지 못한 잔동 ==> %d원" % money)
+
 '''
 
-'''
-#성능분석(2)
-import time
-n = int(input("n을 입력하시오:"))
-start = time.time()
-s = 0
-s = n * (n+1)//2
-end = time.time()
-print(s, end-start)
-'''
+sel = int(input("입력진수 결정(16/10/8/2):"))
+num = input("값 입력:")
 
+if sel == 16:
+    num10 = int(num, 16)
+if sel == 10:
+    num10 = int(num, 10)
+if sel == 8:
+    num10 = int(num, 8)
+if sel == 2:
+    num10 = int(num, 2)
 
-#tutle
-
-import turtle
-
-turtle.title("거북이 사각형 그리기")
-turtle.shape("turtle")
-
-angle = 72
-dist = 72
-
-turtle.forward(dist)
-turtle.right(angle)
-turtle.forward(dist)
-turtle.right(dist)
-turtle.forward(dist)
-turtle.right(angle)
-turtle.forward(dist)
-turtle.right(angle)
-turtle.forward(dist)
-turtle.right(angle)
-
-turtle.done()
+print("16진수 ==>", hex(num10))
+print("10진수 ==>", num10)
+print("8진수 ==>", oct(num10))
+print("2진수 ==>", bin(num10))
