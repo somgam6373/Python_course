@@ -51,7 +51,7 @@ print(f(a,b)+b-1)
 #https://seong6496.tistory.com/72
 '''
 # 입력한 수 이하의 소수를 출력하시오
-
+'''
 def f(n):
     list = []
     for i in range(2, n+1):
@@ -64,6 +64,89 @@ def f(n):
             list.append(i)
     return list
 print(f(100))
+'''
 
+import random
+
+PC_score = 0
+USER_score = 0
+
+def Hitter(USER_score):
+
+    strike = 0
+    out = 0
+    ball = 0
+    PC_score = 0
+    
+    print('\n1회초/Hitter\n')
+
+    while(True):
+        PC_Picher = random.randrange(0,9)
+        print(PC_Picher)
+        Hit = int(input("타자, 스윙할 위치를 선택하시오(0~9):"))
+            
+        if(Hit == 0):
+            ball += 1
+            print("ball!  %dS %dB"%(strike, ball))
+        
+        elif(Hit == PC_Picher and Hit != 0):
+            USER_score += 1
+            strike = 0
+            ball = 0
+            print("HOMERUN!! %d:%d"%(USER_score,PC_score))
+        else:
+            strike +=1
+            print("strike!  %dS %dB"%(strike, ball))
+        if(strike==3):
+            out += 1
+            strike = 0
+            print("out!! %d아웃"%out)
+        if(out == 3):
+            print("\n이닝 종료!! 공수교대!!")
+            Picher(USER_score)
+
+def Picher(USER_score):
+
+    strike = 0
+    out = 0
+    ball = 0
+    PC_score = 0
+
+    print('\n1회초/Picher\n')
+    print("123\n456\n789\n")    
+    while(True):
+       
+        PC_Hitter = random.randrange(1,9)
+        print(PC_Hitter)
+        Picher = int(input("타자에게 던질 위치를 선택하시오(0~9):"))
+        
+        if(Picher == 0):
+            ball += 1
+            print("ball!  %dS %dB"%(strike, ball))
+        elif(Picher ==  PC_Hitter and Picher != 0):
+            PC_score += 1 
+            strike = 0
+            ball = 0
+            print("HOMRUN!! %d:%d"%(PC_score,USER_score))
+        else:
+            strike += 1
+            print(PC_Hitter)
+            print("strike!  %dS %dB"%(strike, ball))
+        if(strike == 3):
+            out += 1
+            strike = 0
+            ball = 0
+            print("out!! %d아웃"%out)
+        if(out == 3):
+            print("\n이닝 종료!! 공수교대!!")
+            Hitter(USER_score)
+
+print("=====start baseballgame=====")
+select = input("choice attack or defend:")
+
+if(select == 'a' or select == 'A'):
+    Hitter(USER_score)
+elif(select == 'd' or select == 'D'):
+    Picher(USER_score)  
 
 
