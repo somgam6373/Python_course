@@ -18,10 +18,29 @@ def Hitter(USER_score):
 
     while(True):
         PC_Picher = random.randrange(0,9)
-        print(PC_Picher)
+        #print(PC_Picher)
         Swing = int(input("타자, 스윙할 위치를 선택하시오(1~9):"))
-            
-        if(Swing == 0):
+        
+        if(PC_Picher == 1):
+            print("\n-------\n|O 2 3|\n|4 5 6|\n|7 8 9|\n-------\n")
+        elif(PC_Picher == 2):
+            print("\n-------\n|1 O 3|\n|4 5 6|\n|7 8 9|\n-------\n")
+        elif(PC_Picher == 3):
+            print("\n-------\n|1 2 O|\n|4 5 6|\n|7 8 9|\n-------\n")
+        elif(PC_Picher == 4):
+            print("\n-------\n|1 2 3|\n|O 5 6|\n|7 8 9|\n-------\n")    
+        elif(PC_Picher == 5):
+            print("\n-------\n|1 2 3|\n|4 O 6|\n|7 8 9|\n-------\n")            
+        elif(PC_Picher == 6):
+            print("\n-------\n|1 2 3|\n|4 5 0|\n|7 8 9|\n-------\n")
+        elif(PC_Picher == 7):
+            print("\n-------\n|1 2 3|\n|4 5 6|\n|O 8 9|\n-------\n")   
+        elif(PC_Picher == 8):
+            print("\n-------\n|1 2 3|\n|4 5 6|\n|7 O 9|\n-------\n")
+        elif(PC_Picher == 9):
+            print("\n-------\n|1 2 3|\n|4 5 6|\n|7 8 O|\n-------\n")         
+        
+        if(Swing == 0):       
             ball += 1
             print("ball!  %dS %dB"%(strike, ball))
         elif(Swing == PC_Picher and Swing != 0):
@@ -66,12 +85,31 @@ def Picher(USER_score):
     PC_score = 0
 
     print('\n1회초/Picher\n')
-    print("123\n456\n789\n")    
+    #print("123\n456\n789\n")    
     while(True):
 
         PC_Hitter = random.randrange(1,9)
-        print(PC_Hitter)
+        #print(PC_Hitter)
         Picher = int(input("타자에게 던질 위치를 선택하시오(0~9):"))
+
+        if(Picher == 1):
+            print("\n-------\n|O 2 3|\n|4 5 6|\n|7 8 9|\n-------\n")
+        elif(Picher == 2):
+            print("\n-------\n|1 O 3|\n|4 5 6|\n|7 8 9|\n-------\n")
+        elif(Picher == 3):
+            print("\n-------\n|1 2 O|\n|4 5 6|\n|7 8 9|\n-------\n")
+        elif(Picher == 4):
+            print("\n-------\n|1 2 3|\n|O 5 6|\n|7 8 9|\n-------\n")    
+        elif(Picher == 5):
+            print("\n-------\n|1 2 3|\n|4 O 6|\n|7 8 9|\n-------\n")            
+        elif(Picher == 6):
+            print("\n-------\n|1 2 3|\n|4 5 0|\n|7 8 9|\n-------\n")
+        elif(Picher == 7):
+            print("\n-------\n|1 2 3|\n|4 5 6|\n|O 8 9|\n-------\n")   
+        elif(Picher == 8):
+            print("\n-------\n|1 2 3|\n|4 5 6|\n|7 O 9|\n-------\n")
+        elif(Picher == 9):
+            print("\n-------\n|1 2 3|\n|4 5 6|\n|7 8 O|\n-------\n")     
         
         if(Picher == 0):
             ball += 1
@@ -117,4 +155,4 @@ select = input("choice attack or defend:")
 if(select == 'a' or select == 'A'):
     Hitter(USER_score)
 elif(select == 'd' or select == 'D'):
-    Picher(USER_score)  
+    Picher(USER_score)
