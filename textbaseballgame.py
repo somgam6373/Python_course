@@ -1,6 +1,5 @@
 #1 안타(범위) 및 베이스 구현 => 회의 후 수정
 #2 3이닝 구현 and 이닝 카운트 => 회의 후 수정 
-#3 볼 구현
 
 import random
 
@@ -119,14 +118,3 @@ if(select == 'a' or select == 'A'):
     Hitter(USER_score)
 elif(select == 'd' or select == 'D'):
     Picher(USER_score)  
-
-'''if ball == 4:
-    Hit += 1
-   if Hit == 1:
-    print("         ^     
-           
-             <             @
-                  
-                    -")
-    elif Hiit == 2:
-        print("")'''
