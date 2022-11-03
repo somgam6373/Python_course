@@ -38,7 +38,9 @@ def Hitter(USER_score):
         elif(PC_Picher == 8):
             print("-------\n|     |\n|     |\n|  O  |\n-------")
         elif(PC_Picher == 9):
-            print("-------\n|     |\n|     |\n|    O|\n-------")         
+            print("-------\n|     |\n|     |\n|    O|\n-------")      
+        else:
+            print("-------\n|     |\n|     |\n|     |\n-------")                   
         
         if(Swing == 0):       
             ball += 1
@@ -110,6 +112,8 @@ def Picher(USER_score):
             print("\n-------\n|     |\n|     |\n|  X  |\n-------\n")
         elif(PC_Hitter == 9):
             print("\n-------\n|     |\n|     |\n|    X|\n-------\n")     
+        else:
+            print("-------\n|     |\n|     |\n|     |\n-------")    
         
         if(Picher == 0):
             ball += 1
@@ -145,7 +149,7 @@ def Picher(USER_score):
             print("\n    @    \n@       @\n    -\n")
 
         if(out == 3):
-            print("\n이닝 종료!! 공수교대!!")
+            print("\n<이닝 종료!! 공수교대!!>")
             Hitter(USER_score)
 
 
